@@ -14,3 +14,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+using getx state management  and mvc pattern
+<img width="193" alt="Screenshot_5" src="https://user-images.githubusercontent.com/16733982/158233373-2c07d2f1-173d-4800-8fd0-e356f7bac58a.png">
+<img width="189" alt="Screenshot_4" src="https://user-images.githubusercontent.com/16733982/158233389-d19145b1-314a-466a-9dda-da37c72ab120.png">
