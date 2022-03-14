@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shodai_mama_pro/controllers/home_page_controller.dart';
 
+import 'details_page.dart';
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
@@ -43,8 +45,15 @@ class _MyHomePageState extends State<MyHomePage> {
             itemBuilder: (context, index) {
               return Card(
                 child: ListTile(
-                  leading: Text("${index + 1}"),
+                  leading: Text(controller.list[index].id),
                   title: Text(controller.list[index].author),
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => DetailsPage(
+                        item: controller.list[index],
+                      ),
+                    ));
+                  },
                 ),
               );
             }),
