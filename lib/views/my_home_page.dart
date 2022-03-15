@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shodai_mama_pro/controllers/home_page_controller.dart';
+import 'package:shodai_mama_pro/models/item.dart';
 
 import 'details_page.dart';
 
@@ -43,14 +44,15 @@ class _MyHomePageState extends State<MyHomePage> {
             controller: _scrollController,
             itemCount: controller.list.length,
             itemBuilder: (context, index) {
+              final Item items = controller.list[index];
               return Card(
                 child: ListTile(
-                  leading: Text(controller.list[index].id),
-                  title: Text(controller.list[index].author),
+                  leading: Text(items.id),
+                  title: Text(items.author),
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => DetailsPage(
-                        item: controller.list[index],
+                        item: items,
                       ),
                     ));
                   },
